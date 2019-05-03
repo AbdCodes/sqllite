@@ -3,8 +3,10 @@ package com.example.sqllite;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -24,6 +26,7 @@ public class DisplayWordActivity extends AppCompatActivity {
         setContentView(R.layout.activity_display_word);
 
         lstWord=findViewById(R.id.lstWords);
+
 
         LoadWord();
     }
@@ -48,5 +51,12 @@ public class DisplayWordActivity extends AppCompatActivity {
                 new ArrayList<String>(hashMap.keySet())
         );
                 lstWord.setAdapter(stringArrayAdapter);
+
+
     }
+
+
+
+
+
 }
